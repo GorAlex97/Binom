@@ -1,0 +1,51 @@
+.pr_in_line {
+	width: 0;
+	height: 39px !important;
+	position: relative;
+	top: -3;
+	left: -1;
+	border: 1px solid #aaa;
+	background: #008ad8 url(../../templates/standart/images/blue-but-bg.png) repeat-x left top;
+	background-size: contain !important;
+	border-radius: 3px;
+}
+.pr_in_body {
+	width: 750px;
+	height: 35px;
+	border: 1px solid #aaa;
+	border-radius: 3px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.install_progress_text{
+	display: block;
+	text-align: left;
+	width: 750px;
+	margin: 15px auto;    
+	font-size: 17px !important;
+	color: black;
+}
+.istall_p_warning{
+	color:#FFC400;
+	font-weight:normal;
+}
+.istall_p_warning a{
+	color:#008ad8;
+	font-weight:normal;
+}
+.install_block{
+	padding: 15px 0 25px 0 !important;
+}
+.install_errors{
+    display: block;
+    width: 750px!important;
+    margin: 10 auto;
+    padding: 5px;
+    border: 5px solid #E53935;
+    height: 200px;
+    overflow: hidden;
+    word-wrap: break-word;
+    overflow: auto;
+    font-size: 14px;
+    /* font-weight: 500; */
+}

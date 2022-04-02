@@ -1,0 +1,62 @@
+/*Statistics*/
+.theme-light .table_stat tr.visible_row.gray_row{ background-color: #F5F5F5; }
+
+/*Coversions*/
+.theme-light .conversion_table tr.cnv_row:nth-child(2n+1){background-color: #F5F5F5;}
+
+/*Reports*/
+.theme-light .report_table tr:nth-child(2n+1){background-color: #F5F5F5;}
+
+/*Trends*/
+.theme-light .trends-stats-table .table_stat tr:nth-child(2n+1){background-color: #F5F5F5;}
+
+/*Users*/
+.theme-light .users_table.table_stat tr:nth-child(2n+1){background-color: #F5F5F5;}
+.theme-light .report_table tbody tr:hover {background-color: #fdf6d4;}
+
+.theme-light .table_stat tr.cnv_row:hover{
+    background-color: #fdf6d4;
+}
+
+/*новые таблицы*/
+.theme-light .page_Clicklog .table_stat-new tr:nth-child(2n+1){
+	background-color: #F5F5F5;
+}
+
+/*.tt_data_table tr{ background-color: #F5F5F5; }*/
+.theme-light .tt_data_table tr:nth-child(2n){ background-color: #FFFFFF; }
+.theme-light .tt_data_table tr:nth-child(2n+1){ background-color: #F5F5F5; }
+/*.tt_data_table tr:not(.selected_row):hover, 
+.tt_data_table tr:not(.selected_row).deleted_item:hover {
+    background-color: #fdf6d4 !important;
+}*/
+
+
+
+/*Statistics*/
+.theme-dark .table_stat tr.visible_row.gray_row{ background-color: #333333; }
+
+/*Coversions*/
+.theme-dark .conversion_table tr.cnv_row:nth-child(2n+1){background-color: #333333;}
+
+/*Reports*/
+.theme-dark .report_table tr:nth-child(2n+1){background-color: #333333;}
+
+/*Trends*/
+.theme-dark .trends-stats-table .table_stat tr:nth-child(2n+1){background-color: #333333;}
+
+/*Users*/
+.theme-dark .users_table.table_stat tr:nth-child(2n+1){background-color: #333333;}
+.theme-dark .report_table tbody tr:hover {background-color: #555555;}
+
+.theme-dark .table_stat tr.cnv_row:hover{
+    background-color: #555555;
+}
+
+/*новые таблицы*/
+.theme-dark .page_Clicklog .table_stat-new tr:nth-child(2n+1){
+    background-color: #333333;
+}
+
+.theme-dark .tt_data_table tr:nth-child(2n){ background-color: #222222; }
+.theme-dark .tt_data_table tr:nth-child(2n+1){ background-color: #333333; }

@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<binom>
+	<info>
+		<name>Binom</name>
+		<version>Version 1.16 (i)</version>
+		<date>2021-10-18 12:00:00</date>
+		<site>https://binom.org</site>
+	</info>
+	<update>
+		<version>116009</version>
+		<date_update>0</date_update>
+	<date_check_update>0</date_check_update>
+	<result_check_update>0</result_check_update></update>
+</binom>

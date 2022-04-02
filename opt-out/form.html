@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<style>
+			.block{
+				width:750px;
+				margin:50px auto;
+				background-color: #fff;
+				box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+				padding-bottom:15px;
+				font-family:OpenSans, sans-serif;
+			}
+			.block-text{
+				width:740px;
+				padding: 15px 5px 5px 5px;
+				text-align: center;
+				font-size: 19px;
+			}
+			.block a{
+				display: block;
+				border-radius: 3px;
+				text-decoration: none;
+				width: 250px;
+				text-align: center;
+				padding-bottom: 5px;
+				padding-top: 5px;
+				margin: 0 auto;
+			}
+			.block-agree{
+				background-color: rgb(125, 169, 68);
+				border: solid 1px rgb(105, 152, 54);
+				color: rgb(255, 255, 255);
+				font-size: 17px;
+			}
+			.block-disagree{
+				background-color: rgb(232, 232, 232);
+				border: solid 1px rgb(172, 179, 186);
+				color: rgb(96, 108, 130);
+				font-size: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="block">
+			<div class="block-text">
+				Hi! This website uses cookies, so we can improve everyone`s experience.<br>
+				You can change your cookie preferences at any time by adjusting your browser settings.<br> 
+				When you click the "I Agree" button, you consent to our collection of cookies
+			</div><br>
+			<a class="block-agree" href="?agree=1">I Agree</a><br>
+			<a class="block-disagree" href="?agree=0">I Disagree</a>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,107 @@
+<?php
+	class Config{
+		var $base;
+		var $password;
+		var $user;
+		var $host;
+		var $charset;
+		var $collation;
+		var $cache;
+		var $template;
+		var $script_url;
+		var $lic_key;
+		var $domain;
+		var $update_info;
+		var $timezone;
+		var $timezone_2;
+		var $general_dir;
+		var $add;
+		var $lp_protect_ignore_ip=1;
+		//var $auto_token=0;
+		//var $no_base=0;
+		//var $no_auto_http=0;
+		//var $fb_prefetch_filter=0;
+		//var $use_x_forwarded_for=1;
+		//var $auto_backup=60;
+		//var $auth_logs=0;
+		//var $cost_mult=0;
+		//var $direct_offer_upsell=0;
+		//var $SaveOfferCampaign=0;
+		//var $error_distribution_url='';
+		//var $PostbackAnswer=0;
+		//var $CurrencyLiveTime=12*3600;
+		//var $TriggerTimeout=45;
+		//var $SendGetToOffer=0;
+		//var $CloseApiUsers=array();
+		//var $CloseApiUsers=0;
+		//var $NoURLEncode=0;
+		//var $HoldFix=0;
+		//var $DetectOption=1;
+		
+		
+		function __construct() {
+			$this->db_config();
+			$this->template_config();
+			$this->general();
+			$this->update_info();
+		}
+		
+		
+		function general(){
+			$this->general_dir='{general_dir}';
+			$this->add='{link}';
+			if(isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"]=='on'){
+				$url='https://'.$_SERVER["SERVER_NAME"];
+			}else{
+				$url='http://'.$_SERVER["SERVER_NAME"];
+			}
+			$url .= ( $_SERVER["SERVER_PORT"] != 80 ) ? ":".$_SERVER["SERVER_PORT"] : "";
+			$url .= $_SERVER["REQUEST_URI"];
+			$domain=$_SERVER["SERVER_NAME"];
+			if(file_exists('configuration/key.cpatools')){
+				$lic_key = file_get_contents($this->general_dir.'configuration/key.cpatools');
+			}else{
+				$lic_key = 'err:106';
+			}
+			$script_url=explode('?', $url);
+			$script_url=$script_url[0];
+			
+			$this->script_url=$script_url;
+			$this->lic_key=$lic_key;
+			$this->domain=$domain;
+			$this->domain=$domain;
+			$this->timezone={timezone1};
+			$this->timezone_2={timezone2};
+		}
+		
+		function db_config(){
+			$this->base='{db_name}';
+			$this->password='{db_password}';
+			$this->user='{db_user}';
+			$this->host='{db_host}';
+			$this->charset='UTF8';
+			$this->collation='utf8_general_ci';
+			$this->cache='0';
+		}
+		
+		function template_config(){
+			$this->template='standart';
+		}
+		
+		function update_info(){
+			if(file_exists('configuration/info.xml')){
+				$info = file_get_contents($this->general_dir.'configuration/info.xml');
+			}
+			if(isset($info)){
+				$update_info = new SimpleXMLElement($info);
+				$arr['name']=$update_info->info->name.' '.$update_info->info->version.' ('.$update_info->info->date.')';
+				$arr['version_name']=$update_info->info->version;
+				$arr['version']=$update_info->update->version;
+				$arr['date_update']=$update_info->update->date_update;
+			}
+			if(isset($arr)){
+				$this->update_info = $arr;
+			}
+		}
+	}
+?>
